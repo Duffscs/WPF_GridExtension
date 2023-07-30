@@ -79,12 +79,12 @@ public static class GridExtension {
             if (rowCount == 0 && columnCount > 0) {
                 rowCount = (int)Math.Ceiling((double)grid.Children.Count / columnCount);
                 for (int i = 0; i < rowCount; i++) {
-                    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+                    grid.RowDefinitions.Add(new RowDefinition());
                 }
             } else if (rowCount > 0 && columnCount == 0) {
                 columnCount = (int)Math.Ceiling((double)grid.Children.Count / rowCount);
                 for (int i = 0; i < columnCount; i++) {
-                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+                    grid.ColumnDefinitions.Add(new ColumnDefinition());
                 }
             } else if (rowCount == 0 && columnCount == 0) {
                 throw new InvalidOperationException("You should define columns or rows to use AutoGrid");
