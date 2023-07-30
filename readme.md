@@ -1,6 +1,6 @@
 # WPF GridExtension Helper
 
-This is a helper class named `GridExtension` that provides some attached properties for extending the functionality of the WPF Grid control. It allows you to set row and column definitions using simple comma-separated strings and automatically arrange the child elements within the grid.
+This is a helper class named [GridExtension](Helper/GridExtension.cs) that provides some attached properties for extending the functionality of the WPF Grid control. It allows you to set row and column definitions using simple comma-separated strings and automatically arrange the child elements within the grid.
 
 ## How to Use
 
@@ -10,7 +10,7 @@ To use the `GridExtension`, follow these steps:
 2. Make sure the namespace of the `GridExtension` class is correctly added to your XAML file like this.
 
 ```xaml
-    xmlns:helper="clr-namespace:WPF_GridExtension.Helper"
+xmlns:helper="clr-namespace:WPF_GridExtension.Helper"
 ```
 
 ### Attached Properties
@@ -30,7 +30,7 @@ To use the `GridExtension`, follow these steps:
 
 - Allows you to set column definitions for the Grid using a comma-separated string.
 - Example usage:
-```
+```xaml
 <Grid helper:GridExtension.ColumnDefinitions="2*, 3*">
     <!-- Add child elements here -->
 </Grid>
@@ -48,9 +48,9 @@ If both are missing, an `InvalidOperationException` will be thrown during runtim
 - Example usage:
 
 ```xaml
-  <Grid helper:GridExtension.RowDefinitions="Auto, *, 100" helper:GridExtension.AutoGrid="True">
-      <!-- Add child elements here, they will be placed automatically -->
-  </Grid>
+<Grid helper:GridExtension.RowDefinitions="Auto, *, 100" helper:GridExtension.AutoGrid="True">
+  <!-- Add child elements here, they will be placed automatically -->
+</Grid>
 ```
 or
 ```xaml
